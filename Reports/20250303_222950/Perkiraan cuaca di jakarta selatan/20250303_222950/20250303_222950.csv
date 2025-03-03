@@ -1,0 +1,17 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Perkiraan cuaca di jakarta selatan,,,,03-03-2025 22:29:51,03-03-2025 22:29:52,1.467s,PASSED
+,,,,,,,
+Test Cases/Perkiraan cuaca,,,,03-03-2025 22:29:51,03-03-2025 22:29:52,1.396s,PASSED
+"apiKey = ""ae692cc22ce374262feb1d0cbe27068f""",,,,03-03-2025 22:29:51,03-03-2025 22:29:51,0.001s,PASSED
+"responseWeather = sendRequest(findTestObject(""Ramalan cuaca 5 hari di Jakarta Selatan""))",,,,03-03-2025 22:29:51,03-03-2025 22:29:52,0.845s,PASSED
+"verifyResponseStatusCode(responseWeather, 200)",,,,03-03-2025 22:29:52,03-03-2025 22:29:52,0.007s,PASSED
+"println(""Response Weather: "" + responseWeather.getResponseBodyContent())",,,,03-03-2025 22:29:52,03-03-2025 22:29:52,0.005s,PASSED
+"responseAirPollution = sendRequest(findTestObject(""Polusi udara terkini di Jakarta Selatan""))",,,,03-03-2025 22:29:52,03-03-2025 22:29:52,0.361s,PASSED
+"verifyResponseStatusCode(responseAirPollution, 200)",,,,03-03-2025 22:29:52,03-03-2025 22:29:52,0.003s,PASSED
+"println(""Response Air Pollution: "" + responseAirPollution.getResponseBodyContent())",,,,03-03-2025 22:29:52,03-03-2025 22:29:52,0.002s,PASSED
+"jsonWeather = getElementPropertyValue(responseWeather, ""list[0].main.temp"")",,,,03-03-2025 22:29:52,03-03-2025 22:29:52,0.037s,PASSED
+"println(""Suhu saat ini: "" + jsonWeather + ""°C"")",,,,03-03-2025 22:29:52,03-03-2025 22:29:52,0.002s,PASSED
+"jsonPollution = getElementPropertyValue(responseAirPollution, ""list[0].components.pm10"")",,,,03-03-2025 22:29:52,03-03-2025 22:29:52,0.011s,PASSED
+"println(""Tingkat polusi PM10: "" + jsonPollution + "" µg/m³"")",,,,03-03-2025 22:29:52,03-03-2025 22:29:52,0.001s,PASSED
+"assert jsonWeather != null : ""Gagal mendapatkan suhu cuaca""",,,,03-03-2025 22:29:52,03-03-2025 22:29:52,0.001s,PASSED
+"assert jsonPollution != null : ""Gagal mendapatkan data polusi""",,,,03-03-2025 22:29:52,03-03-2025 22:29:52,0.001s,PASSED

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Perkiraan cuaca di jakarta selatan" time="1.467" tests="1" failures="0" errors="0">
+   <testsuite name="Perkiraan cuaca di jakarta selatan" tests="1" failures="0" errors="0" time="1.467" skipped="0" timestamp="03-03-2025T22:29:51" hostname="admin - localhost" id="Test Suites/Perkiraan cuaca di jakarta selatan">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="/Users/admin/Katalon Studio/Test QA Automation ADL Indonesia\nTest QA Automation ADL Indonesia\nTest QA Automation ADL Indonesia/Reports/20250303_222950/Perkiraan cuaca di jakarta selatan/20250303_222950"/>
+         <property name="logFiles" value="/Users/admin/Katalon Studio/Test QA Automation ADL Indonesia\nTest QA Automation ADL Indonesia\nTest QA Automation ADL Indonesia/Reports/20250303_222950/Perkiraan cuaca di jakarta selatan/20250303_222950/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="admin - localhost"/>
+         <property name="hostAddress" value="127.0.0.1"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="10.0.1.223"/>
+      </properties>
+      <testcase name="Test Cases/Perkiraan cuaca" time="1.396" classname="Test Cases/Perkiraan cuaca" status="PASSED">
+         <system-out><![CDATA[03-03-2025T22:29:51 - [TEST_CASE][PASSED] - Test Cases/Perkiraan cuaca: Test Cases/Perkiraan cuaca
+
+03-03-2025T22:29:51 - [TEST_STEP][PASSED] - apiKey = "ae692cc22ce374262feb1d0cbe27068f": null
+
+03-03-2025T22:29:51 - [TEST_STEP][PASSED] - responseWeather = sendRequest(findTestObject("Ramalan cuaca 5 hari di Jakarta Selatan")): Send request successfully
+
+03-03-2025T22:29:52 - [MESSAGE][INFO] - HAR: /Users/admin/Katalon Studio/Test QA Automation ADL Indonesia
+Test QA Automation ADL Indonesia
+Test QA Automation ADL Indonesia/Reports/20250303_222950/Perkiraan cuaca di jakarta selatan/20250303_222950/requests/main/0.har
+
+03-03-2025T22:29:52 - [MESSAGE][PASSED] - Send request successfully
+
+03-03-2025T22:29:52 - [TEST_STEP][PASSED] - verifyResponseStatusCode(responseWeather, 200): Verify response status code successfully
+
+03-03-2025T22:29:52 - [MESSAGE][PASSED] - Verify response status code successfully
+
+03-03-2025T22:29:52 - [TEST_STEP][PASSED] - println("Response Weather: " + responseWeather.getResponseBodyContent()): null
+
+03-03-2025T22:29:52 - [TEST_STEP][PASSED] - responseAirPollution = sendRequest(findTestObject("Polusi udara terkini di Jakarta Selatan")): Send request successfully
+
+03-03-2025T22:29:52 - [MESSAGE][INFO] - HAR: /Users/admin/Katalon Studio/Test QA Automation ADL Indonesia
+Test QA Automation ADL Indonesia
+Test QA Automation ADL Indonesia/Reports/20250303_222950/Perkiraan cuaca di jakarta selatan/20250303_222950/requests/main/1.har
+
+03-03-2025T22:29:52 - [MESSAGE][PASSED] - Send request successfully
+
+03-03-2025T22:29:52 - [TEST_STEP][PASSED] - verifyResponseStatusCode(responseAirPollution, 200): Verify response status code successfully
+
+03-03-2025T22:29:52 - [MESSAGE][PASSED] - Verify response status code successfully
+
+03-03-2025T22:29:52 - [TEST_STEP][PASSED] - println("Response Air Pollution: " + responseAirPollution.getResponseBodyContent()): null
+
+03-03-2025T22:29:52 - [TEST_STEP][PASSED] - jsonWeather = getElementPropertyValue(responseWeather, "list[0].main.temp"): null
+
+03-03-2025T22:29:52 - [TEST_STEP][PASSED] - println("Suhu saat ini: " + jsonWeather + "°C"): null
+
+03-03-2025T22:29:52 - [TEST_STEP][PASSED] - jsonPollution = getElementPropertyValue(responseAirPollution, "list[0].components.pm10"): null
+
+03-03-2025T22:29:52 - [TEST_STEP][PASSED] - println("Tingkat polusi PM10: " + jsonPollution + " µg/m³"): null
+
+03-03-2025T22:29:52 - [TEST_STEP][PASSED] - assert jsonWeather != null : "Gagal mendapatkan suhu cuaca": null
+
+03-03-2025T22:29:52 - [TEST_STEP][PASSED] - assert jsonPollution != null : "Gagal mendapatkan data polusi": null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[03-03-2025T22:29:51 - [TEST_SUITE][PASSED] - Perkiraan cuaca di jakarta selatan: Test Cases/Perkiraan cuaca]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Perkiraan cuaca</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>67bc78f6-29b9-4416-a177-da4ffcc367df</testCaseGuid>
+</TestCaseEntity>
